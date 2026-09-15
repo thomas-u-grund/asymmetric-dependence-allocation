@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------
-# 16: Response to external review -- the single most important
-#     remaining concern. 3,437 of 3,456 single-tie-change realignment
+# 16: Tests the most serious potential confound for the tie-choice
+#     result: starting sign. 3,437 of 3,456 single-tie-change realignment
 #     events (99.4%) occur in triads with exactly one negative tie
 #     (balance requires an odd number of negatives, so 1 or 3); only 19
 #     have three. In a one-negative-two-positive triad, a hostility ->

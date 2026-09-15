@@ -1,9 +1,8 @@
 # ------------------------------------------------------------------
-# 12: Response to external review, priority item 11. Translate the
-#     conditional-logit coefficient into a substantive quantity: how
-#     often is the most trade-asymmetric relationship in a realigning
-#     triad the one that actually changes, against the 1-in-3 baseline
-#     random allocation would produce?
+# 12: Translate the conditional-logit coefficient into a substantive
+#     quantity: how often is the most trade-asymmetric relationship in
+#     a realigning triad the one that actually changes, against the
+#     1-in-3 baseline random allocation would produce?
 # ------------------------------------------------------------------
 suppressMessages({ library(dplyr) })
 

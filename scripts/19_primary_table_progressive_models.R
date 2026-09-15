@@ -1,9 +1,8 @@
 # ------------------------------------------------------------------
-# 19: Response to external review (final round), item 1 -- Table 1
-#     should present the starting-sign-adjusted specification as the
-#     primary model, with a progressive sequence (baseline -> +
+# 19: Builds Table 1's progressive model sequence (baseline -> +
 #     starting sign -> + weak-link mutual dependence -> + capability
-#     asymmetry) rather than reporting only the unadjusted baseline.
+#     asymmetry), so the starting-sign-adjusted specification, not the
+#     unadjusted baseline, is the primary reported model.
 # ------------------------------------------------------------------
 suppressMessages({ library(dplyr); library(readr); library(tidyr); library(survival); library(sandwich); library(lmtest) })
 

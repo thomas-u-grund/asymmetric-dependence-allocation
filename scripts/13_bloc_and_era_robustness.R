@@ -1,16 +1,13 @@
 # ------------------------------------------------------------------
-# 13: Response to external review, priority item 4 (partial): leave-
-#     one-bloc-out and pre/post-1945 robustness for the main tie-choice
-#     result. Uses the bloc-tagged sample already built in script 07.
+# 13: Leave-one-bloc-out and pre/post-1945 robustness for the main
+#     tie-choice result. Uses the bloc-tagged sample already built in
+#     script 07.
 #
-#     Bloc identification (via raw/alliances member lists, not assumed
-#     from memory): the two largest blocs in the trade-valid sample are
-#     NOT NATO/Warsaw Pact -- they are the Arab League (version4id 199,
-#     1,228 of 3,456 events) and the Rio Pact/inter-American system
-#     (version4id 210, 1,008 events). NATO (227) has 355 events; the
-#     Warsaw Pact (243) has only 18. This corrects the "NATO, Warsaw
-#     Pact" framing used loosely in the manuscript's data section and
-#     should be fixed there.
+#     Bloc identification (via raw/alliances member lists): the two
+#     largest blocs in the trade-valid sample are the Arab League
+#     (version4id 199, 1,228 of 3,456 events) and the Rio Pact/inter-
+#     American system (version4id 210, 1,008 events), not NATO/Warsaw
+#     Pact -- NATO (227) has 355 events, the Warsaw Pact (243) only 18.
 # ------------------------------------------------------------------
 suppressMessages({ library(dplyr); library(readr); library(tidyr); library(survival); library(sandwich); library(lmtest) })
 

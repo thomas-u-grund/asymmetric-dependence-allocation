@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------
-# 17: Response to external review, remaining items.
+# 17: Two measurement-sensitivity checks.
 #
 #     (A) The $50m minimum-national-trade floor used to compute trade
 #     shares (script 01) is a fixed NOMINAL threshold applied across

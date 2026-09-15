@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------
-# 20: Response to external review (final round), items 1-2 --
+# 20: Two checks on the M4 specification.
 #     (1) add a control for how long a candidate relationship has
 #     already held its current sign to M4, since alliances and MIDs
 #     have very different typical durations and duration could

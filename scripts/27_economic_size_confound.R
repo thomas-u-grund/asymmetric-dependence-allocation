@@ -1,6 +1,7 @@
 # ------------------------------------------------------------------
-# 27: Response to external review point 3 -- does trade-dependence
-#     asymmetry simply proxy for a difference in the two states' overall
+# 27: Exploratory check, not referenced in the manuscript: does trade-
+#     dependence asymmetry simply proxy for a difference in the two
+#     states' overall
 #     economic size (one large trading economy, one small one) rather
 #     than a distinct relational mechanism? Section 6.2 already shows
 #     dependence asymmetry survives controlling for the WEAK-LINK level

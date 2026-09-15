@@ -1,15 +1,14 @@
 # ------------------------------------------------------------------
-# 18: Response to external review (final round), items 2 and 4 --
-#     the two analyses flagged as must-do before submission.
+# 18: Two choice-set corrections.
 #
-#     (2) H2's choice set has the same problem H1's originally did: in
+#     (1) H2's choice set has the same problem H1's originally did: in
 #     a one-negative triad, the negative (MID) relationship cannot
 #     possibly be "the alliance that terminated." Re-estimate H2 with
 #     the choice set restricted to relationships that were actually
 #     alliances (positive) at t1 -- for one-negative triads this is a
 #     clean two-way choice between the two eligible alliances.
 #
-#     (4) Exclude every single-tie-change event where the CHANGED tie's
+#     (2) Exclude every single-tie-change event where the CHANGED tie's
 #     dyad-year, at t1, had an alliance and a MID coexisting (coded
 #     negative under this paper's convention, but a neg_to_pos
 #     transition there can just mean the MID ended while the alliance

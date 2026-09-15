@@ -2,11 +2,9 @@
 # 26: Mine the actual triad data for concrete historical examples of
 #     the modal "realignment" event -- a militarized dispute subsiding
 #     within a standing multilateral alliance framework -- to ground
-#     Sections 3/5.3's theoretical language in real cases, per external
-#     review point 1 ("I want to know what an actual A-B 'adjustment'
-#     looks like politically"). Candidates only; historical verification
-#     of whichever cases are selected happens separately before they are
-#     written into the manuscript.
+#     Sections 3/5.3's theoretical language in real cases. Candidates
+#     only; the cases used in the manuscript (Section 5.3) were
+#     independently verified against historical sources afterward.
 # ------------------------------------------------------------------
 suppressMessages({ library(dplyr); library(readr); library(tidyr) })
 

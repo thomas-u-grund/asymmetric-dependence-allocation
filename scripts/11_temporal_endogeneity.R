@@ -1,7 +1,6 @@
 # ------------------------------------------------------------------
-# 11: Response to external review, priority item 3 (temporal
-#     endogeneity). Every result so far measures trade-dependence
-#     asymmetry AT t1, the year immediately before the realignment
+# 11: Temporal-endogeneity check. Every result so far measures trade-
+#     dependence asymmetry AT t1, the year immediately before the realignment
 #     event itself -- i.e. contemporaneous with the resolution. That
 #     leaves open reverse causality: if a relationship's trade is
 #     already shifting BECAUSE political realignment is imminent (or

@@ -92,7 +92,7 @@ report <- function(tag, m) {
 }
 
 report("MODEL 0: baseline structural controls only", m0)
-report("MODEL 1: + symmetric trade dependence (mean, parent-project control)", m1)
+report("MODEL 1: + symmetric trade dependence (mean, baseline control)", m1)
 report("MODEL 2 [H1/H2, mean asymmetry]: + dep_asym_mean", m2)
 report("MODEL 3 [H1/H2, PRIMARY]: + dep_asym_max (worst-tie asymmetry)", m3)
 report("MODEL 4 [H4]: + dep_asym_max + cap_asym_max", m4)

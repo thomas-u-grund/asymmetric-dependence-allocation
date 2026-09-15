@@ -1,9 +1,9 @@
 # ------------------------------------------------------------------
-# 29: Corrects a flaw in script 28's "state clustering" identified on
-#     external review: splitting each tie into a "lower-ccode state"
-#     and "higher-ccode state" column and clustering on those two
-#     columns separately is an artifact of numeric ccode ordering, not
-#     a real grouping. The same state (say, France) sits in the
+# 29: Corrects a flaw in script 28's "state clustering": splitting
+#     each tie into a "lower-ccode state" and "higher-ccode state"
+#     column and clustering on those two columns separately is an
+#     artifact of numeric ccode ordering, not a real grouping. The
+#     same state (say, France) sits in the
 #     lower-ccode column for some ties and the higher-ccode column for
 #     others, so two observations that both involve France are only
 #     recognized as dependent if France happens to occupy the SAME

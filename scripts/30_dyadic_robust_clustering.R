@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------
-# 30: Replaces script 29's connected-component approach, which an
-#     external review correctly identified as wrong: clustering by
-#     connected component imposes dependence *transitively* across an
+# 30: Replaces script 29's connected-component approach, which is
+#     wrong: clustering by connected component imposes dependence
+#     *transitively* across an
 #     entire connected chain (A-B, B-C, C-D all end up in one cluster
 #     even though A-B and C-D share no actor), which is a much broader
 #     -- and unjustified -- notion of dependence than "these two

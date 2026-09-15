@@ -1,19 +1,21 @@
 # ------------------------------------------------------------------
-# 15: Response to second round of external review, priority items 1-2.
+# 15: Two checks on the tie-choice framework.
+#
 #     (1) Split single-tie realignment events by transition DIRECTION:
 #     alliance-to-hostility (pos_to_neg) vs. hostility-to-alliance
 #     (neg_to_pos). Does trade-dependence asymmetry predict tie choice
-#     in BOTH directions, or only one? Pooling them, as the main draft
-#     does, implicitly assumes the mechanism is direction-agnostic.
+#     in BOTH directions, or only one? Pooling them, as the main
+#     tie-choice model does, implicitly assumes the mechanism is
+#     direction-agnostic.
 #
 #     (2) Build an EDGE-LEVEL model of dissolution: among triads that
 #     resolve via a tie disappearing entirely, which of the 3 candidate
 #     ties is the one that disappears? This is the direct analogue of
-#     the realignment tie-choice model, needed to actually test the
-#     manuscript's claim that capability asymmetry governs "exit" --
-#     that claim currently rests only on a TRIAD-level hazard (does the
-#     triad dissolve at all), not on WHICH tie dissolves. Also split by
-#     whether the disappearing tie was positive or negative beforehand.
+#     the realignment tie-choice model, and is needed to test whether
+#     capability asymmetry predicts WHICH tie dissolves, not just
+#     whether the triad dissolves at all (a triad-level hazard, tested
+#     separately in script 09). Also splits by whether the disappearing
+#     tie was positive or negative beforehand.
 # ------------------------------------------------------------------
 suppressMessages({ library(dplyr); library(readr); library(tidyr); library(survival); library(sandwich); library(lmtest) })
 

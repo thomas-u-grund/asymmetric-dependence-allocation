@@ -1,6 +1,5 @@
 # ------------------------------------------------------------------
-# 14: Response to external review, priority item 5/10 (partial):
-#     does the main result depend on coding ANY of the four ATOP
+# 14: Does the main result depend on coding ANY of the four ATOP
 #     alliance types (defense, neutrality, non-aggression, entente) as
 #     a positive tie, or does it survive the stricter, more common
 #     definition of "ally" as a DEFENSE PACT specifically? Self-

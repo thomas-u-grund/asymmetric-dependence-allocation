@@ -1,8 +1,7 @@
 # ------------------------------------------------------------------
-# 05: H3 (displacement) and H4 (capability). Adapted from the parent
-#     project's scripts 09_h2_tie_choice.R (identify single-tie
-#     realignment events) and 12_h2_unbalanced_load.R (unbalanced-load
-#     conditional logit), with trade-dependence asymmetry and
+# 05: H3 (displacement) and H4 (capability). Identifies single-tie
+#     realignment events and builds the unbalanced-load conditional
+#     logit tie-choice model, with trade-dependence asymmetry and
 #     capability asymmetry merged in per tie.
 #
 #     H3 claim: when the tie carrying the greatest unbalanced load is
@@ -44,7 +43,8 @@ single <- events %>% filter(n_changed == 1)
 cat("Single-tie-change events:", nrow(single), "of", nrow(events),
     sprintf("(%.1f%%)\n", 100 * nrow(single) / nrow(events)))
 
-# --- unbalanced load per (year, edge), same construction as parent script 12 ---
+# --- unbalanced load per (year, edge): for each edge, how many OTHER
+# closed triads sharing it are themselves unbalanced that year ---
 edge_long <- bind_rows(
   tr %>% transmute(year, triad_id, balanced, e_lo = pmin(node1, node2), e_hi = pmax(node1, node2)),
   tr %>% transmute(year, triad_id, balanced, e_lo = pmin(node1, node3), e_hi = pmax(node1, node3)),
@@ -147,7 +147,7 @@ cat("Single-tie-change events with all 3 ties trade-valid:", nrow(strict),
     sprintf(" (%.1f%% of single-tie-change events)\n", 100*nrow(strict)/nrow(single)))
 cat("Long-format rows:", nrow(long), " events:", n_distinct(long$event_id), "\n\n")
 
-cat("=== BASELINE: does the changed tie have the highest unbalanced load? (reproduces parent H2) ===\n")
+cat("=== BASELINE: does the changed tie have the highest unbalanced load? ===\n")
 print(summary(clog_baseline))
 
 cat("\n\n=== does dep_asymmetry alone predict which tie changes? ===\n")

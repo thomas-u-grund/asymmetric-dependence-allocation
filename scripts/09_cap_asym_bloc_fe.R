@@ -1,8 +1,7 @@
 # ------------------------------------------------------------------
-# 09: Close the open item flagged in the outline (5.4): does the
-#     capability (CINC) asymmetry effect on the hazard models survive
-#     the same bloc fixed-effects stress test that overturned the
-#     dep_asym_max triad-level "suppression" result in script 07?
+# 09: Does the capability (CINC) asymmetry effect on the hazard models
+#     survive the same bloc fixed-effects stress test that overturned
+#     the dep_asym_max triad-level "suppression" result in script 07?
 #     Reuses the bloc-tagged person-year panel already built there.
 # ------------------------------------------------------------------
 suppressMessages({ library(dplyr); library(readr); library(sandwich); library(lmtest) })

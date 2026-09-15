@@ -1,7 +1,6 @@
 # ------------------------------------------------------------------
-# 21: Response to external review (final round) -- the one remaining
-#     empirical check before submission. Geography is a classical
-#     confound for both trade dependence and militarized disputes, and
+# 21: Geography is a classical confound for both trade dependence and
+#     militarized disputes, and
 #     is not in M4. Add dyadic contiguity (any direct-contiguity type,
 #     including by water up to 400 miles) to M4 and confirm dependence
 #     asymmetry survives.

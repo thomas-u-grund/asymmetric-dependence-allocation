@@ -4,14 +4,17 @@
 #     simultaneously via the Cameron-Gelbach-Miller sandwich estimator
 #     (sandwich::vcovCL with a multi-column cluster data frame).
 #
-#     Motivated by an external review of the draft: Section 8's
-#     limitations paragraph listed "a full multiway clustering
-#     combining triad, bloc, dyad, and state simultaneously... remains
-#     a natural further step" rather than reporting it. Appendix C.2
-#     already clusters by dyad and by each of the two constituent
-#     states, separately and pairwise with triad -- this script is the
-#     single combined estimate that subsumes all of those as special
-#     cases, on the exact M4 specification and sample (n=3,456).
+#     Appendix C.2 already clusters by dyad and by each of the two
+#     constituent states, separately and pairwise with triad -- this
+#     script is the single combined estimate that subsumes all of
+#     those as special cases, on the exact M4 specification and sample
+#     (n=3,456).
+#
+#     NOTE: the "state" dimension used here (splitting each tie into a
+#     lower-ccode and higher-ccode column) is flawed -- see script 29's
+#     header. Only this script's triad+bloc+dyad results are reported
+#     in the paper (Appendix C.2); the state-clustering rows are
+#     superseded by script 30's dyadic-robust estimator.
 # ------------------------------------------------------------------
 suppressMessages({
   library(dplyr); library(readr); library(tidyr); library(survival); library(sandwich); library(lmtest)
