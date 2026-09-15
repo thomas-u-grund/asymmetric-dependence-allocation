@@ -1,14 +1,13 @@
 # ------------------------------------------------------------------
 # 04: H1 (dissolution suppressed) and H2 (realignment suppressed) --
 #     discrete-time cause-specific hazard models on the trade-valid
-#     subsample, with spell-duration bins (parent project's primary
-#     spec, script 14) and era dummies, cluster-robust SEs by triad.
+#     subsample, with spell-duration bins and era dummies,
+#     cluster-robust SEs by triad.
 #
 #     Nested comparison per outcome:
 #       (0) baseline structural controls only
-#       (1) + symmetric trade dependence (mean across 3 ties) -- the
-#           parent project's existing control, for a same-sample
-#           baseline comparison
+#       (1) + symmetric trade dependence (mean across 3 ties) --
+#           a baseline control, for a same-sample comparison
 #       (2) + dep_asym_mean (mean dependence asymmetry across 3 ties)
 #       (3) + dep_asym_max  (worst-tie dependence asymmetry) -- the
 #           sharper "does this triad contain a trapped tie" test

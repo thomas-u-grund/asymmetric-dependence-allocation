@@ -116,8 +116,7 @@ long <- strict %>%
 
 cat("\nLong-format rows (3 per event):", nrow(long), " | events:", n_distinct(long$event_id), "\n")
 
-# --- H3: does the changed tie have the max unbalanced load, as in the
-#     parent project's baseline finding, reproduced here on this
+# --- H3: does the changed tie have the max unbalanced load, on this
 #     trade-valid subsample? ---
 clog_baseline <- clogit(changed ~ z_unbal_load + strata(event_id), data = long)
 

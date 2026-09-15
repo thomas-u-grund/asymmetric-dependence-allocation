@@ -120,10 +120,10 @@ cat("Total closed triads across all years:", nrow(triads_all), "\n")
 cat("Balanced:", sum(triads_all$balanced), " Unbalanced:", sum(!triads_all$balanced), "\n")
 
 # --- Attach capability control (mean log CINC of the 3 members) ---
-# cinc1/cinc2/cinc3 (keyed to node1/node2/node3) are KEPT, not dropped, unlike
-# the parent project's version of this script: this project needs per-tie
-# capability asymmetry (H4 -- is the trade-exposed side also the weaker
-# side?), which requires knowing which node anchors which tie.
+# cinc1/cinc2/cinc3 (keyed to node1/node2/node3) are KEPT, not dropped:
+# this project needs per-tie capability asymmetry (H4 -- is the
+# trade-exposed side also the weaker side?), which requires knowing
+# which node anchors which tie.
 nmc_lookup <- nmc %>% mutate(ccode = as.character(ccode)) %>% select(ccode, year, log_cinc)
 triads_all <- triads_all %>%
   left_join(nmc_lookup, by = c("node1" = "ccode", "year")) %>% rename(cinc1 = log_cinc) %>%

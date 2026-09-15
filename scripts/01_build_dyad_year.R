@@ -2,13 +2,11 @@
 # 01: Build signed dyad-year panel from Correlates of War data, plus
 # asymmetric trade-dependence and capability-asymmetry measures.
 #
-# Adapted from ../2025 Social Balance/scripts/01_build_dyad_year.R.
-# Same alliance/MID signed-tie construction; the trade block is changed
-# to KEEP trade_share_low/trade_share_high separately instead of
-# collapsing them into a single symmetric geometric-mean dependence
-# score. That symmetric score (trade_dependence) is still produced,
-# for continuity with the original project's control variable, but the
-# asymmetry measures are the point of this project:
+# Standard alliance/MID signed-tie construction; the trade block keeps
+# trade_share_low/trade_share_high separately instead of collapsing
+# them into a single symmetric geometric-mean dependence score. That
+# symmetric score (trade_dependence) is still produced, as a control
+# variable, but the asymmetry measures are the point of this project:
 #   - dep_exposed  = max(share_low, share_high)   how exposed is the
 #                    more-dependent side (Hirschman "vulnerability")
 #   - dep_asymmetry = |share_low - share_high|     how lopsided the
@@ -40,8 +38,7 @@ mids <- read_csv(file.path(raw, "mids/dyadic_mid_4.03_update/dyadic_mid_4.03.csv
   distinct()
 
 # 3. Merge: if a dyad-year has both an alliance and a MID, code as negative
-#    (conflict dominates cooperation in the same year -- conservative choice,
-#    matches the parent project's convention, DECISIONS.md there)
+#    (conflict dominates cooperation in the same year -- conservative choice)
 signed_ties <- bind_rows(alliances, mids) %>%
   group_by(year, ccode_low, ccode_high) %>%
   summarise(sign = ifelse(any(sign == -1), -1, 1),
@@ -68,8 +65,7 @@ write_csv(state_years, "data/state_years.csv")
 # ------------------------------------------------------------------
 # 5. Trade dependence, kept ASYMMETRIC (1870-2014 coverage only, per
 #    COW Trade 4.0 -- this bounds this project's usable sample to
-#    roughly 1870-2012 once intersected with the alliance/MID window,
-#    versus the parent project's full 1816-2012).
+#    roughly 1870-2012 once intersected with the alliance/MID window).
 # ------------------------------------------------------------------
 dyadic_trade <- read_csv(file.path(raw, "trade/COW_Trade_4.0/Dyadic_COW_4.0.csv"), show_col_types = FALSE) %>%
   mutate(across(c(flow1, flow2, smoothtotrade), ~ na_if(., -9))) %>%
@@ -79,9 +75,9 @@ dyadic_trade <- read_csv(file.path(raw, "trade/COW_Trade_4.0/Dyadic_COW_4.0.csv"
 
 national_trade <- read_csv(file.path(raw, "trade/COW_Trade_4.0/National_COW_4.0.csv"), show_col_types = FALSE) %>%
   mutate(total_trade = imports + exports,
-         # same floor as the parent project: require >= $50m recorded
-         # national trade before using it as a denominator, else shares
-         # from tiny/misreported totals blow up above 1
+         # require >= $50m recorded national trade before using it as
+         # a denominator, else shares from tiny/misreported totals
+         # blow up above 1
          total_trade = ifelse(total_trade < 50, NA, total_trade)) %>%
   select(ccode, year, total_trade)
 
@@ -103,7 +99,7 @@ tie_trade <- dyadic_trade %>%
     trade_share_low  = ifelse(overflow, NA, total_dyadic_trade / total_trade_low),
     trade_share_high = ifelse(overflow, NA, total_dyadic_trade / total_trade_high),
 
-    # symmetric measure, kept for continuity with the parent project's control
+    # symmetric measure, kept as a control variable
     trade_dependence = ifelse(!is.na(trade_share_low) & !is.na(trade_share_high),
                                sqrt(pmax(trade_share_low, 0) * pmax(trade_share_high, 0)), NA),
     log_trade_dependence = ifelse(!is.na(trade_dependence) & trade_dependence > 0,

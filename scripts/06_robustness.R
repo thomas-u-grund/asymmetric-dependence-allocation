@@ -1,8 +1,7 @@
 # ------------------------------------------------------------------
 # 06: Robustness battery for the primary H1/H2 hazard result
-#     (dep_asym_max), adapted from the parent project's scripts
-#     14_duration_dependence.R (contiguity + regime-type controls) and
-#     16_bloc_robustness.R (two-way triad x bloc clustering).
+#     (dep_asym_max): contiguity/regime-type controls and two-way
+#     triad x bloc clustering.
 #
 #     (1) contiguity + Polity5 regime-type controls added on top of
 #         the primary spec (base + z_trade_mean + z_dep_asym_max)

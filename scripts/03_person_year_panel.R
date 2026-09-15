@@ -1,11 +1,9 @@
 # ------------------------------------------------------------------
 # 03: Build the person-year competing-risks panel (spell construction,
-#     cause-specific events, duration bins), adapted from the parent
-#     project's scripts 07_competing_risks.R + 14_duration_dependence.R,
-#     with per-tie trade-dependence ASYMMETRY and capability asymmetry
-#     merged in as TIME-VARYING covariates (updated every year of the
-#     spell, not frozen at onset -- same design principle as the
-#     parent project's structural covariates).
+#     cause-specific events, duration bins), with per-tie trade-
+#     dependence ASYMMETRY and capability asymmetry merged in as
+#     TIME-VARYING covariates (updated every year of the spell, not
+#     frozen at onset).
 # ------------------------------------------------------------------
 suppressMessages({
   library(dplyr); library(readr); library(tidyr)
@@ -20,7 +18,7 @@ tr <- tr_full %>%
 
 LAST_YEAR <- max(tr$year)
 
-# --- identify spells (same logic as parent project's script 07) ---
+# --- identify spells ---
 tr <- tr %>%
   group_by(triad_id) %>%
   mutate(
