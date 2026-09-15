@@ -1,0 +1,50 @@
+=== PART A: duration-in-current-sign control added to M4 ===
+Duration (years, t1) summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   1.00    2.00    9.00   14.92   23.00   99.00 
+
+--- M4 (no duration), matched sample ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.171089  5.2402 1.604e-07 ***
+z_dep_asym       0.297542   0.090403  3.2913 0.0009974 ***
+initial_negative 2.767286   0.216247 12.7969 < 2.2e-16 ***
+z_mutual_min     0.214978   0.082624  2.6019 0.0092710 ** 
+z_cap_asym       0.038908   0.117065  0.3324 0.7396177    
+z_emb            0.015625   0.223026  0.0701 0.9441452    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- M4 + duration control ---
+
+z test of coefficients:
+
+                  Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load      0.545064   0.177277  3.0746 0.0021076 ** 
+z_dep_asym        0.290748   0.081214  3.5800 0.0003436 ***
+initial_negative  1.959272   0.212219  9.2323 < 2.2e-16 ***
+z_mutual_min      0.221437   0.084167  2.6309 0.0085153 ** 
+z_cap_asym       -0.018671   0.110341 -0.1692 0.8656333    
+z_log_dur        -1.027225   0.141233 -7.2732 3.509e-13 ***
+z_emb             0.146168   0.210450  0.6945 0.4873397    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- M4, two-way (triad+bloc) clustered SE ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.378500  2.3687   0.01785 *  
+z_dep_asym       0.297542   0.130060  2.2877   0.02215 *  
+initial_negative 2.767286   0.629636  4.3951 1.107e-05 ***
+z_mutual_min     0.214978   0.127541  1.6856   0.09188 .  
+z_cap_asym       0.038908   0.238155  0.1634   0.87023    
+z_emb            0.015625   0.315634  0.0495   0.96052    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

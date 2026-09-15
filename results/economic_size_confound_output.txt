@@ -1,0 +1,61 @@
+=== Without economic-size-asymmetry control (= M4) ===
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.171089  5.2402 1.604e-07 ***
+z_dep_asym       0.297542   0.090403  3.2913 0.0009974 ***
+initial_negative 2.767286   0.216247 12.7969 < 2.2e-16 ***
+z_mutual_min     0.214978   0.082624  2.6019 0.0092710 ** 
+z_cap_asym       0.038908   0.117065  0.3324 0.7396177    
+z_emb            0.015625   0.223026  0.0701 0.9441452    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== With economic-size-asymmetry control added to M4 ===
+
+z test of coefficients:
+
+                  Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load      0.896127   0.175143  5.1165 3.112e-07 ***
+z_dep_asym        0.197799   0.104064  1.9007 0.0573368 .  
+initial_negative  2.771271   0.220600 12.5624 < 2.2e-16 ***
+z_mutual_min      0.320496   0.092904  3.4498 0.0005611 ***
+z_cap_asym       -0.111315   0.150699 -0.7387 0.4601155    
+z_emb            -0.021917   0.224561 -0.0976 0.9222519    
+z_econ_size_asym  0.308751   0.133172  2.3184 0.0204260 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== Same, two-way (triad+bloc) clustered ===
+
+z test of coefficients:
+
+                  Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load      0.896127   0.368640  2.4309  0.015061 *  
+z_dep_asym        0.197799   0.139790  1.4150  0.157077    
+initial_negative  2.771271   0.587123  4.7201 2.357e-06 ***
+z_mutual_min      0.320496   0.116896  2.7417  0.006112 ** 
+z_cap_asym       -0.111315   0.296520 -0.3754  0.707361    
+z_emb            -0.021917   0.304258 -0.0720  0.942576    
+z_econ_size_asym  0.308751   0.135498  2.2786  0.022689 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== With economic-size-asymmetry, capability asymmetry DROPPED (collinearity check) ===
+
+z test of coefficients:
+
+                  Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load      0.907432   0.170532  5.3212 1.031e-07 ***
+z_dep_asym        0.182774   0.106073  1.7231 0.0848700 .  
+initial_negative  2.768322   0.217591 12.7226 < 2.2e-16 ***
+z_mutual_min      0.323114   0.093345  3.4615 0.0005372 ***
+z_emb            -0.018809   0.224442 -0.0838 0.9332135    
+z_econ_size_asym  0.254750   0.103456  2.4624 0.0138007 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

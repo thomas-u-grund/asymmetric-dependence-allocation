@@ -1,0 +1,54 @@
+
+=== M1: baseline === N events = 3456 
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.976368   0.147672 20.1553 < 2.2e-16 ***
+z_dep_asym    0.300622   0.071614  4.1978 2.695e-05 ***
+z_emb        -0.745388   0.215790 -3.4542 0.0005519 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== M2: + starting sign === N events = 3456 
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.923615   0.165700  5.5740 2.489e-08 ***
+z_dep_asym       0.393902   0.070343  5.5997 2.147e-08 ***
+initial_negative 2.749438   0.212352 12.9475 < 2.2e-16 ***
+z_emb            0.223682   0.206339  1.0840    0.2783    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== M3: + weak-link mutual dependence === N events = 3456 
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.893229   0.170254  5.2464 1.551e-07 ***
+z_dep_asym       0.311086   0.088744  3.5054 0.0004559 ***
+initial_negative 2.765853   0.217166 12.7361 < 2.2e-16 ***
+z_mutual_min     0.205570   0.084001  2.4472 0.0143954 *  
+z_emb            0.017752   0.223244  0.0795 0.9366193    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== M4: + capability asymmetry (full model) === N events = 3456 
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.171089  5.2402 1.604e-07 ***
+z_dep_asym       0.297542   0.090403  3.2913 0.0009974 ***
+initial_negative 2.767286   0.216247 12.7969 < 2.2e-16 ***
+z_mutual_min     0.214978   0.082624  2.6019 0.0092710 ** 
+z_cap_asym       0.038908   0.117065  0.3324 0.7396177    
+z_emb            0.015625   0.223026  0.0701 0.9441452    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

@@ -1,0 +1,32 @@
+Bloc sizes (events, i.e. 1/3 of long rows):
+# A tibble: 13 × 3
+   primary_bloc     n   pct
+   <chr>        <int> <dbl>
+ 1 199           1228  35.5
+ 2 210           1008  29.2
+ 3 227            355  10.3
+ 4 318            275   8  
+ 5 none           219   6.3
+ 6 349            151   4.4
+ 7 398             98   2.8
+ 8 407             39   1.1
+ 9 267             38   1.1
+10 243             18   0.5
+11 350             13   0.4
+12 230              8   0.2
+13 169              6   0.2
+=== Leave-one-bloc-out (dependence-asymmetry coefficient, triad-clustered SEs) ===
+Full sample (all blocs)                  N events= 3456  b= 0.3006  SE=0.0716  p= 0.00003
+Excluding Arab League (id 199)           N events= 2228  b= 0.3770  SE=0.0813  p= 0.00000
+Excluding Rio Pact / inter-American (id 210) N events= 2448  b= 0.2875  SE=0.0705  p= 0.00005
+Excluding NATO (id 227)                  N events= 3101  b= 0.2934  SE=0.0721  p= 0.00005
+Excluding Warsaw Pact (id 243)           N events= 3438  b= 0.3066  SE=0.0749  p= 0.00004
+ONLY triads outside any big bloc         N events=  219  b= 0.2635  SE=0.1090  p= 0.01565
+
+
+=== Era split ===
+Pre-1945                                 N events=   48  b= 0.6851  SE=0.3855  p= 0.07559
+1945-present                             N events= 3408  b= 0.2751  SE=0.0729  p= 0.00016
+
+
+13_bloc_and_era_robustness.R complete.

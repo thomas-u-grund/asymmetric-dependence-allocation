@@ -1,0 +1,33 @@
+Contiguity: proportion of candidate ties contiguous: 0.425 
+Sample: N events = 3456 
+
+=== M4 (matched sample, no contiguity) ===
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.171089  5.2402 1.604e-07 ***
+z_dep_asym       0.297542   0.090403  3.2913 0.0009974 ***
+initial_negative 2.767286   0.216247 12.7969 < 2.2e-16 ***
+z_mutual_min     0.214978   0.082624  2.6019 0.0092710 ** 
+z_cap_asym       0.038908   0.117065  0.3324 0.7396177    
+z_emb            0.015625   0.223026  0.0701 0.9441452    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== M4 + dyadic contiguity ===
+
+z test of coefficients:
+
+                  Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load      0.781588   0.171557  4.5559 5.217e-06 ***
+z_dep_asym        0.287175   0.084508  3.3982 0.0006783 ***
+initial_negative  2.588421   0.216564 11.9522 < 2.2e-16 ***
+z_mutual_min      0.064053   0.084726  0.7560 0.4496506    
+z_cap_asym        0.105229   0.110007  0.9566 0.3387846    
+contig            1.012595   0.159060  6.3661 1.939e-10 ***
+z_emb            -0.015701   0.223396 -0.0703 0.9439675    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

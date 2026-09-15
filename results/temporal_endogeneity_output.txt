@@ -1,0 +1,148 @@
+=== dep_asymmetry measured AT t1 (contemporaneous with realignment) ===
+N events: 3456 
+--- 1-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.976368   0.147672 20.1553 < 2.2e-16 ***
+z_dep_asym    0.300622   0.071614  4.1978 2.695e-05 ***
+z_emb        -0.745388   0.215790 -3.4542 0.0005519 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.976368   0.346815  8.5820 < 2.2e-16 ***
+z_dep_asym    0.300622   0.089048  3.3759 0.0007356 ***
+z_emb        -0.745388   0.192875 -3.8646 0.0001113 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== dep_asymmetry measured AT SPELL ONSET (before this realignment) ===
+N events: 3431 
+--- 1-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.978522   0.148577 20.0469 < 2.2e-16 ***
+z_dep_asym    0.317866   0.073021  4.3531 1.342e-05 ***
+z_emb        -0.747052   0.217959 -3.4275 0.0006092 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+             Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.97852    0.35176  8.4674 < 2.2e-16 ***
+z_dep_asym    0.31787    0.07958  3.9943 6.488e-05 ***
+z_emb        -0.74705    0.19955 -3.7437 0.0001813 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== dep_asymmetry measured at ONSET - 1 YEAR ===
+N events: 3366 
+--- 1-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.967081   0.147228 20.1530 < 2.2e-16 ***
+z_dep_asym    0.318583   0.078015  4.0836 4.434e-05 ***
+z_emb        -0.742096   0.215826 -3.4384 0.0005852 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.967081   0.353285  8.3985 < 2.2e-16 ***
+z_dep_asym    0.318583   0.073575  4.3301 1.491e-05 ***
+z_emb        -0.742096   0.196377 -3.7789 0.0001575 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== dep_asymmetry measured at ONSET - 3 YEARS ===
+N events: 3229 
+--- 1-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.954394   0.150434 19.6392 < 2.2e-16 ***
+z_dep_asym    0.314932   0.088159  3.5723 0.0003538 ***
+z_emb        -0.731382   0.206970 -3.5338 0.0004097 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.954394   0.374953  7.8794 3.290e-15 ***
+z_dep_asym    0.314932   0.070248  4.4831 7.356e-06 ***
+z_emb        -0.731382   0.193671 -3.7764 0.0001591 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== dep_asymmetry measured at ONSET - 5 YEARS ===
+N events: 3052 
+--- 1-way ---
+
+z test of coefficients:
+
+             Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.94035    0.15220 19.3185 < 2.2e-16 ***
+z_dep_asym    0.28750    0.07807  3.6826 0.0002309 ***
+z_emb        -0.68767    0.20987 -3.2767 0.0010504 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.940346   0.364986  8.0561 7.879e-16 ***
+z_dep_asym    0.287499   0.071166  4.0399 5.348e-05 ***
+z_emb        -0.687674   0.191306 -3.5946 0.0003249 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== SUMMARY: z_dep_asym coefficient across timing specifications ===
+--- 1-way clustered ---
+at t1 (contemporaneous)        b=  0.3006  SE= 0.0716  p= 0.00003
+at spell onset                 b=  0.3179  SE= 0.0730  p= 0.00001
+onset - 1yr                    b=  0.3186  SE= 0.0780  p= 0.00004
+onset - 3yr                    b=  0.3149  SE= 0.0882  p= 0.00035
+onset - 5yr                    b=  0.2875  SE= 0.0781  p= 0.00023
+--- 2-way (triad+bloc) clustered ---
+at t1 (contemporaneous)        b=  0.3006  SE= 0.0890  p= 0.00074
+at spell onset                 b=  0.3179  SE= 0.0796  p= 0.00006
+onset - 1yr                    b=  0.3186  SE= 0.0736  p= 0.00001
+onset - 3yr                    b=  0.3149  SE= 0.0702  p= 0.00001
+onset - 5yr                    b=  0.2875  SE= 0.0712  p= 0.00005

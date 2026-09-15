@@ -1,0 +1,43 @@
+=== Validation: manual one-way dyad clustering vs. sandwich::vcovCL ===
+Max relative error: 1.738248e-16 (passed, < 1e-6)
+
+=== Actor-overlap (dyadic-robust, Cameron-Miller / Aronow-Samii-Assenova) clustering on M4 ===
+N events = 3456  N tie-rows = 10368  distinct actors = 139 
+
+                   Estimate Std. Error          z            p
+z_unbal_load     0.89654069  0.2471378 3.62769531 2.859624e-04
+z_dep_asym       0.29754172  0.1242004 2.39565811 1.659056e-02
+initial_negative 2.76728562  0.2950925 9.37768961 6.743413e-21
+z_mutual_min     0.21497801  0.0717264 2.99719493 2.724764e-03
+z_cap_asym       0.03890773  0.2148680 0.18107737 8.563068e-01
+z_emb            0.01562539  0.4448733 0.03512323 9.719815e-01
+
+
+For comparison, one-way triad-clustered and triad+bloc+dyad results (script 28):
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.171089  5.2402 1.604e-07 ***
+z_dep_asym       0.297542   0.090403  3.2913 0.0009974 ***
+initial_negative 2.767286   0.216247 12.7969 < 2.2e-16 ***
+z_mutual_min     0.214978   0.082624  2.6019 0.0092710 ** 
+z_cap_asym       0.038908   0.117065  0.3324 0.7396177    
+z_emb            0.015625   0.223026  0.0701 0.9441452    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.358297  2.5022   0.01234 *  
+z_dep_asym       0.297542   0.126009  2.3613   0.01821 *  
+initial_negative 2.767286   0.614861  4.5007 6.774e-06 ***
+z_mutual_min     0.214978   0.118891  1.8082   0.07058 .  
+z_cap_asym       0.038908   0.227215  0.1712   0.86404    
+z_emb            0.015625   0.282233  0.0554   0.95585    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

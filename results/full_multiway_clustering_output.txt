@@ -1,0 +1,77 @@
+=== Full multiway clustering on M4 (Table 1), progressively adding cluster dimensions ===
+N events = 3456  N tie-rows = 10368 
+
+--- 1-way: triad ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.171089  5.2402 1.604e-07 ***
+z_dep_asym       0.297542   0.090403  3.2913 0.0009974 ***
+initial_negative 2.767286   0.216247 12.7969 < 2.2e-16 ***
+z_mutual_min     0.214978   0.082624  2.6019 0.0092710 ** 
+z_cap_asym       0.038908   0.117065  0.3324 0.7396177    
+z_emb            0.015625   0.223026  0.0701 0.9441452    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way: triad + bloc ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.378500  2.3687   0.01785 *  
+z_dep_asym       0.297542   0.130060  2.2877   0.02215 *  
+initial_negative 2.767286   0.629636  4.3951 1.107e-05 ***
+z_mutual_min     0.214978   0.127541  1.6856   0.09188 .  
+z_cap_asym       0.038908   0.238155  0.1634   0.87023    
+z_emb            0.015625   0.315634  0.0495   0.96052    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 3-way: triad + bloc + dyad ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.358297  2.5022   0.01234 *  
+z_dep_asym       0.297542   0.126009  2.3613   0.01821 *  
+initial_negative 2.767286   0.614861  4.5007 6.774e-06 ***
+z_mutual_min     0.214978   0.118891  1.8082   0.07058 .  
+z_cap_asym       0.038908   0.227215  0.1712   0.86404    
+z_emb            0.015625   0.282233  0.0554   0.95585    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 4-way: triad + bloc + dyad + state(lower ccode) ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.372576  2.4063   0.01611 *  
+z_dep_asym       0.297542   0.119441  2.4911   0.01273 *  
+initial_negative 2.767286   0.624477  4.4314 9.364e-06 ***
+z_mutual_min     0.214978   0.121873  1.7639   0.07774 .  
+z_cap_asym       0.038908   0.246199  0.1580   0.87443    
+z_emb            0.015625   0.356784  0.0438   0.96507    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 5-way: triad + bloc + dyad + state(lower) + state(higher) ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.346053  2.5908  0.009576 ** 
+z_dep_asym       0.297542   0.115158  2.5838  0.009773 ** 
+initial_negative 2.767286   0.598965  4.6201 3.835e-06 ***
+z_mutual_min     0.214978   0.119185  1.8037  0.071274 .  
+z_cap_asym       0.038908   0.235691  0.1651  0.868882    
+z_emb            0.015625   0.366538  0.0426  0.965997    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

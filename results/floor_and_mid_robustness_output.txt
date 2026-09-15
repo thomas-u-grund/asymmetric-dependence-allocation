@@ -1,0 +1,15 @@
+=== PART A: trade-floor sensitivity (national-trade minimum, in COW-reported units) ===
+No floor             N events= 3528  b= 0.2892  SE=0.0710  p= 0.00005
+$10m floor           N events= 3524  b= 0.2893  SE=0.0710  p= 0.00005
+$50m floor (main)    N events= 3456  b= 0.3006  SE=0.0716  p= 0.00003
+$200m floor          N events= 3002  b= 0.2525  SE=0.0730  p= 0.00054
+
+
+=== PART B: how often does 'negative' mean alliance+MID coexisting, not hostility alone? ===
+hihost >= 3: 4467 negative dyad-years total, 870 (19.5%) coexist with an alliance
+hihost >= 4: 3422 negative dyad-years total, 621 (18.1%) coexist with an alliance
+hihost >= 5: 715 negative dyad-years total, 45 (6.3%) coexist with an alliance
+
+=== MID threshold sensitivity: rebuilding the signed network and tie-choice test for hihost >= 4 ===
+hihost >= 4:  N events= 2464  b= 0.1910  SE=0.0884  p= 0.03072
+hihost >= 5:  N events=  108  b=12.9807  SE=0.2901  p= 0.00000

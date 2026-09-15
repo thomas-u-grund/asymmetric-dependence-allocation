@@ -1,0 +1,99 @@
+=== PART 1: tie-choice model by transition direction ===
+alliance -> hostility (pos_to_neg): N events = 117 
+
+z test of coefficients:
+
+             Estimate Std. Error z value Pr(>|z|)    
+z_unbal_load -1.04979    0.10680 -9.8296  < 2e-16 ***
+z_dep_asym    0.25485    0.14032  1.8162  0.06934 .  
+z_emb        -0.35778    0.40881 -0.8752  0.38147    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+hostility -> alliance (neg_to_pos): N events = 3339 
+
+z test of coefficients:
+
+             Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  9.96638    1.59425  6.2515 4.066e-10 ***
+z_dep_asym    0.20101    0.10079  1.9943   0.04612 *  
+z_emb        -5.24448    1.03471 -5.0685 4.009e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== PART 2: edge-level dissolution model ===
+Dissolution events (triad-level): 678 
+Single-tie dissolutions: 407 of 678  (60.0%)
+Sign of disappearing tie beforehand:
+
+ -1   1 
+326  81 
+With capability data on all 3 ties: 399 
+With trade data on all 3 ties: 326 
+
+--- Does capability asymmetry predict WHICH tie disappears? (all single-tie dissolutions) ---
+
+z test of coefficients:
+
+                                 Estimate Std. Error z value  Pr(>|z|)    
+as.numeric(scale(cap_asymmetry))  0.15417    0.09536  1.6167    0.1059    
+as.numeric(scale(embeddedness))  -1.40247    0.20217 -6.9371 4.002e-12 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- alliance disappearing (+ -> 0) : N = 78 ---
+
+z test of coefficients:
+
+                                  Estimate Std. Error z value Pr(>|z|)
+as.numeric(scale(cap_asymmetry))  0.063278   0.156394  0.4046   0.6858
+as.numeric(scale(embeddedness))  -0.182137   0.187692 -0.9704   0.3318
+
+
+--- MID ending (- -> 0) : N = 321 ---
+
+z test of coefficients:
+
+                                 Estimate Std. Error z value  Pr(>|z|)    
+as.numeric(scale(cap_asymmetry))  0.15787    0.11611  1.3596    0.1739    
+as.numeric(scale(embeddedness))  -2.35199    0.35751 -6.5787 4.745e-11 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- Does TRADE asymmetry predict WHICH tie disappears? (pooled, alliance+MID together) ---
+
+z test of coefficients:
+
+                                 Estimate Std. Error z value  Pr(>|z|)    
+as.numeric(scale(dep_asymmetry)) -0.33253    0.13884 -2.3951   0.01662 *  
+as.numeric(scale(embeddedness))  -1.61821    0.24477 -6.6111 3.815e-11 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- alliance disappearing (+ -> 0) : N = 65 ---
+
+z test of coefficients:
+
+                                 Estimate Std. Error z value Pr(>|z|)   
+as.numeric(scale(dep_asymmetry)) -0.62196    0.21049 -2.9548 0.003129 **
+as.numeric(scale(embeddedness))  -0.30471    0.22526 -1.3527 0.176141   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- MID ending (- -> 0) : N = 261 ---
+
+z test of coefficients:
+
+                                 Estimate Std. Error z value  Pr(>|z|)    
+as.numeric(scale(dep_asymmetry)) -0.13927    0.11103 -1.2543    0.2097    
+as.numeric(scale(embeddedness))  -2.78493    0.48870 -5.6986 1.208e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

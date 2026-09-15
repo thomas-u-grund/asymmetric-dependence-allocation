@@ -1,0 +1,50 @@
+=== Corrected actor-overlap (connected-component) state clustering on M4 ===
+N events = 3456  N tie-rows = 10368 
+Distinct states: 139  connected components: 2 
+Sanity check (tie's two states in different components; should be 0): 0 
+Share of events in the single largest component: 92 %
+
+--- 1-way: triad ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.171089  5.2402 1.604e-07 ***
+z_dep_asym       0.297542   0.090403  3.2913 0.0009974 ***
+initial_negative 2.767286   0.216247 12.7969 < 2.2e-16 ***
+z_mutual_min     0.214978   0.082624  2.6019 0.0092710 ** 
+z_cap_asym       0.038908   0.117065  0.3324 0.7396177    
+z_emb            0.015625   0.223026  0.0701 0.9441452    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way: triad + bloc ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.378500  2.3687   0.01785 *  
+z_dep_asym       0.297542   0.130060  2.2877   0.02215 *  
+initial_negative 2.767286   0.629636  4.3951 1.107e-05 ***
+z_mutual_min     0.214978   0.127541  1.6856   0.09188 .  
+z_cap_asym       0.038908   0.238155  0.1634   0.87023    
+z_emb            0.015625   0.315634  0.0495   0.96052    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 3-way: triad + bloc + state-connected-component (subsumes dyad and both state-position checks) ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load     0.896541   0.168183  5.3308 9.780e-08 ***
+z_dep_asym       0.297542        NaN     NaN       NaN    
+initial_negative 2.767286   0.118688 23.3155 < 2.2e-16 ***
+z_mutual_min     0.214978   0.049198  4.3696 1.245e-05 ***
+z_cap_asym       0.038908        NaN     NaN       NaN    
+z_emb            0.015625        NaN     NaN       NaN    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

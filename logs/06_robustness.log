@@ -1,0 +1,126 @@
+Trade-valid analysis sample: 6635 person-years
+
+Warning message:
+There were 4 warnings in `mutate()`.
+The first warning was:
+ℹ In argument: `triad_min_polity2 = min(...)`.
+ℹ In row 2105.
+Caused by warning in `min()`:
+! no non-missing arguments to min; returning Inf
+ℹ Run `dplyr::last_dplyr_warnings()` to see the 3 remaining warnings. 
+IR-controls robustness sample: 5435 person-years, 1545 triads
+
+Multilateral alliances with >=8 members: 19 
+Triad-years in a big bloc: 5653 (85.2%)
+=== (1) DISSOLUTION, + contiguity + regime type (n=5435) ===
+
+z test of coefficients:
+
+                 Estimate Std. Error  z value  Pr(>|z|)    
+(Intercept)    -5.4126184  0.4379178 -12.3599 < 2.2e-16 ***
+z_tie_btw       0.1041298  0.0910143   1.1441 0.2525803    
+z_tie_emb      -2.8621214  0.2865590  -9.9879 < 2.2e-16 ***
+z_actor_load   -0.5203127  0.1919623  -2.7105 0.0067183 ** 
+z_cinc          0.8830844  0.1579095   5.5923  2.24e-08 ***
+era1945-1989    0.3701267  0.3085751   1.1995 0.2303451    
+erapost-1989   -0.3952310  0.3780106  -1.0456 0.2957663    
+dur_binyr2     -0.4546484  0.2226475  -2.0420 0.0411506 *  
+dur_binyr3      0.9495942  0.2699631   3.5175 0.0004356 ***
+dur_binyr4-5   -1.0580246  0.5331496  -1.9845 0.0472024 *  
+dur_binyr6-10  -1.2919015  0.5218247  -2.4757 0.0132961 *  
+dur_binyr11+   -2.1218526  0.9766534  -2.1726 0.0298123 *  
+z_trade_mean   -0.2308493  0.1694608  -1.3623 0.1731166    
+z_dep_asym_max  0.0085036  0.1879012   0.0453 0.9639037    
+z_contig        0.0347829  0.0854723   0.4069 0.6840453    
+z_polity       -0.1009653  0.1004895  -1.0047 0.3150245    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== (1) REALIGNMENT, + contiguity + regime type ===
+
+z test of coefficients:
+
+                Estimate Std. Error  z value  Pr(>|z|)    
+(Intercept)    -0.268145   0.226586  -1.1834 0.2366447    
+z_tie_btw      -0.030844   0.037246  -0.8281 0.4075994    
+z_tie_emb       0.280849   0.068348   4.1091 3.972e-05 ***
+z_actor_load    0.108397   0.070580   1.5358 0.1245905    
+z_cinc         -0.444405   0.054665  -8.1296 4.306e-16 ***
+era1945-1989    0.882311   0.227436   3.8794 0.0001047 ***
+erapost-1989    0.766647   0.229739   3.3370 0.0008468 ***
+dur_binyr2     -0.022410   0.072461  -0.3093 0.7571173    
+dur_binyr3     -0.762184   0.113250  -6.7301 1.695e-11 ***
+dur_binyr4-5   -1.212965   0.125680  -9.6513 < 2.2e-16 ***
+dur_binyr6-10  -2.505318   0.169641 -14.7683 < 2.2e-16 ***
+dur_binyr11+   -2.099412   0.161599 -12.9915 < 2.2e-16 ***
+z_trade_mean    0.344573   0.061366   5.6151 1.965e-08 ***
+z_dep_asym_max -0.093787   0.044382  -2.1132 0.0345864 *  
+z_contig       -0.168407   0.033747  -4.9903 6.030e-07 ***
+z_polity        0.033486   0.031182   1.0739 0.2828709    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== (2) Multilateral blocs (>=8 members): 19 ===
+Triad-years in a big bloc: 5653 (85.2%)
+
+=== (2) DISSOLUTION: z_dep_asym_max under 1-way vs 2-way (triad+bloc) clustering ===
+1-way: b= -0.006390868  SE= 0.1269746  p= 0.9598579 
+2-way: b= -0.006390868  SE= 0.2663998  p= 0.9808608 
+
+=== (2) REALIGNMENT: z_dep_asym_max under 1-way vs 2-way (triad+bloc) clustering ===
+1-way: b= -0.08070613  SE= 0.03440159  p= 0.01897609 
+2-way: b= -0.08070613  SE= 0.0748333  p= 0.2808201 
+
+
+=== Full 2-way clustered coefficient tables (for reference) ===
+--- Dissolution ---
+
+z test of coefficients:
+
+                 Estimate Std. Error  z value  Pr(>|z|)    
+(Intercept)    -4.7704473  0.8883903  -5.3698 7.884e-08 ***
+z_tie_btw      -0.0124144  0.0432132  -0.2873  0.773896    
+z_tie_emb      -2.7069739  0.4371624  -6.1921 5.935e-10 ***
+z_actor_load   -0.5557094  0.1332443  -4.1706 3.038e-05 ***
+z_cinc          0.7816765  0.2876618   2.7173  0.006581 ** 
+era1945-1989   -0.0255649  0.2707207  -0.0944  0.924765    
+erapost-1989   -0.5856640  0.3734005  -1.5685  0.116774    
+dur_binyr2     -0.5337556  0.0932759  -5.7223 1.051e-08 ***
+dur_binyr3      0.6047994  1.1073798   0.5462  0.584960    
+dur_binyr4-5   -1.4920154  0.2487878  -5.9971 2.008e-09 ***
+dur_binyr6-10  -1.6452737  0.1459679 -11.2715 < 2.2e-16 ***
+dur_binyr11+   -2.4078656  0.0828288 -29.0704 < 2.2e-16 ***
+z_trade_mean   -0.2350051  0.1900723  -1.2364  0.216310    
+z_dep_asym_max -0.0063909  0.2663998  -0.0240  0.980861    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- Realignment ---
+
+z test of coefficients:
+
+                Estimate Std. Error z value  Pr(>|z|)    
+(Intercept)    -0.417846   0.416101 -1.0042  0.315286    
+z_tie_btw      -0.037563   0.089757 -0.4185  0.675584    
+z_tie_emb       0.376215   0.212650  1.7692  0.076865 .  
+z_actor_load    0.175775   0.088610  1.9837  0.047289 *  
+z_cinc         -0.357462   0.064739 -5.5216 3.360e-08 ***
+era1945-1989    0.946589   0.441939  2.1419  0.032202 *  
+erapost-1989    0.959804   0.424285  2.2622  0.023687 *  
+dur_binyr2     -0.081461   0.170535 -0.4777  0.632881    
+dur_binyr3     -0.800842   0.202665 -3.9516 7.764e-05 ***
+dur_binyr4-5   -1.405492   0.200226 -7.0195 2.226e-12 ***
+dur_binyr6-10  -2.329129   0.580467 -4.0125 6.008e-05 ***
+dur_binyr11+   -1.742758   0.323788 -5.3824 7.350e-08 ***
+z_trade_mean    0.297532   0.092116  3.2300  0.001238 ** 
+z_dep_asym_max -0.080706   0.074833 -1.0785  0.280820    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+06_robustness.R complete. See results/robustness_output.txt

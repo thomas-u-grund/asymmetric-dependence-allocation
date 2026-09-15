@@ -1,0 +1,14 @@
+=== DEFENSE-PACTS-ONLY alliance definition (vs. all 4 ATOP types in main analysis) ===
+Signed ties: 55703  | triads: 339381  | unbalanced: 8632 
+Realignment events: 4731  | single-tie: 4726  | trade-valid: 2903 
+
+
+z test of coefficients:
+
+             Estimate Std. Error z value Pr(>|z|)    
+z_unbal_load  3.29218    0.18477 17.8181  < 2e-16 ***
+z_dep_asym    0.29452    0.12158  2.4225  0.01541 *  
+z_emb         0.15374    0.25311  0.6074  0.54359    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

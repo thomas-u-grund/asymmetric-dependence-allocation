@@ -1,0 +1,61 @@
+Alliance-termination events: 81 
+Sign composition at t1 (how many of the 3 candidate ties were alliances):
+
+ 2 
+81 
+
+Long-format rows in eligible-choice-set model: 130  | events: 65 
+Alternatives per event (should be 2 for one-negative triads, 3 for three-alliance triads):
+
+ 2 
+65 
+
+
+Events where the CHANGED tie was an alliance+MID overlap dyad at t1: 3336 of 3456 
+=== PART A: H2 with eligible-alliance choice set ===
+Alliance-termination events: 81 
+N alliances at t1 (composition):
+
+ 2 
+81 
+
+--- Pooled choice set (all 3 candidate ties, original spec) ---
+
+z test of coefficients:
+
+           Estimate Std. Error z value Pr(>|z|)   
+z_dep_asym -0.62196    0.21049 -2.9548 0.003129 **
+z_emb      -0.30471    0.22526 -1.3527 0.176141   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- ELIGIBLE choice set (alliances only) ---
+
+z test of coefficients:
+
+           Estimate Std. Error z value Pr(>|z|)   
+z_dep_asym -1.00459    0.34427 -2.9180 0.003522 **
+z_emb      -0.75642    0.28675 -2.6379 0.008342 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== PART B: excluding alliance+MID overlap events, H1 ===
+Overlap dyad-years in the full panel: 870 
+Single-tie-change events where the CHANGED tie was an overlap dyad at t1: 3336 of 3456 
+Events remaining after exclusion: 120 
+
+z test of coefficients:
+
+             Estimate Std. Error z value Pr(>|z|)    
+z_unbal_load -1.02769    0.10527 -9.7620  < 2e-16 ***
+z_dep_asym    0.31254    0.14355  2.1772  0.02946 *  
+z_emb        -0.40320    0.41843 -0.9636  0.33525    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+18_h2_eligible_choiceset_and_overlap_exclusion.R complete.

@@ -1,0 +1,79 @@
+Single-tie-change events (all 3 ties trade-valid, bloc-tagged): 3456 
+
+Correlation, own dep_asymmetry vs. other_dep_asym_max (within tie rows): 0.489 
+
+Single-tie-change events used: 3456  | long-format rows: 10368 
+Correlation, own dep_asymmetry vs. other_dep_asym_max: 0.489 
+
+=== BASELINE: own dep_asymmetry only (reproduces H3, this subsample) ===
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.976368   0.147672 20.1553 < 2.2e-16 ***
+z_dep_asym    0.300622   0.071614  4.1978 2.695e-05 ***
+z_emb        -0.745388   0.215790 -3.4542 0.0005519 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== CROSS-TIE TEST: does asymmetry ELSEWHERE in the triad also predict this tie changing? ===
+--- 1-way (triad) clustered SEs ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load      2.97768    0.14824 20.0869 < 2.2e-16 ***
+z_dep_asym        0.37367    0.24593  1.5194  0.128654    
+z_other_dep_asym  0.11370    0.35180  0.3232  0.746545    
+z_emb            -0.74236    0.21458 -3.4596  0.000541 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way (triad + bloc) clustered SEs ---
+
+z test of coefficients:
+
+                 Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load      2.97768    0.35092  8.4853 < 2.2e-16 ***
+z_dep_asym        0.37367    0.31292  1.1941    0.2324    
+z_other_dep_asym  0.11370    0.49149  0.2313    0.8171    
+z_emb            -0.74236    0.18618 -3.9874  6.68e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== Interaction: does own asymmetry and elsewhere-asymmetry substitute/compound? ===
+--- 1-way ---
+
+z test of coefficients:
+
+                            Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load                 2.98414    0.14880 20.0544 < 2.2e-16 ***
+z_dep_asym                   0.85871    0.35007  2.4530 0.0141682 *  
+z_other_dep_asym             0.77320    0.47919  1.6136 0.1066240    
+z_emb                       -0.76814    0.21411 -3.5876 0.0003337 ***
+z_dep_asym:z_other_dep_asym -0.21989    0.10572 -2.0798 0.0375395 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+                            Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load                 2.98414    0.35243  8.4673 < 2.2e-16 ***
+z_dep_asym                   0.85871    0.44959  1.9100   0.05614 .  
+z_other_dep_asym             0.77320    0.65692  1.1770   0.23920    
+z_emb                       -0.76814    0.18720 -4.1034 4.071e-05 ***
+z_dep_asym:z_other_dep_asym -0.21989    0.10052 -2.1875   0.02870 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+08_cross_tie_coercion.R complete.

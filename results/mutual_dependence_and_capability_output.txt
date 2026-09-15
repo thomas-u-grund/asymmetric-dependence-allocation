@@ -1,0 +1,172 @@
+Events: 3456  | long rows: 10368 
+cor(dep_asymmetry, mutual_dep): 0.947 
+cor(dep_asymmetry, mutual_dep_min): 0.438 
+
+=== (2) dep_asymmetry holding MUTUAL DEPENDENCE (mean) constant ===
+--- 1-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.958446   0.148345 19.9430 < 2.2e-16 ***
+z_dep_asym   -0.068383   0.208071 -0.3286  0.742421    
+z_mutual      0.389493   0.201318  1.9347  0.053025 .  
+z_emb        -0.808238   0.215629 -3.7483  0.000178 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way (triad+bloc) ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.958446   0.347761  8.5071 < 2.2e-16 ***
+z_dep_asym   -0.068383   0.343277 -0.1992    0.8421    
+z_mutual      0.389493   0.405119  0.9614    0.3363    
+z_emb        -0.808238   0.187839 -4.3028 1.686e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== (2) robustness: mutual dependence as weak-link (min) ===
+--- 1-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.958446   0.148345 19.9430 < 2.2e-16 ***
+z_dep_asym    0.239803   0.079997  2.9977  0.002721 ** 
+z_mutual_min  0.138727   0.071704  1.9347  0.053025 .  
+z_emb        -0.808238   0.215629 -3.7483  0.000178 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.958446   0.347761  8.5071 < 2.2e-16 ***
+z_dep_asym    0.239803   0.087762  2.7324  0.006287 ** 
+z_mutual_min  0.138727   0.144293  0.9614  0.336337    
+z_emb        -0.808238   0.187839 -4.3028 1.686e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== (6) capability asymmetry ALONE in the tie-choice model ===
+--- 1-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.992457   0.148912 20.0955 < 2.2e-16 ***
+z_cap_asym   -0.024519   0.084697 -0.2895  0.772210    
+z_emb        -0.649157   0.206556 -3.1428  0.001674 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.992457   0.352330  8.4933 < 2.2e-16 ***
+z_cap_asym   -0.024519   0.122966 -0.1994 0.8419552    
+z_emb        -0.649157   0.172741 -3.7580 0.0001713 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== (6) trade dep_asymmetry AND cap_asymmetry together ===
+--- 1-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.967625   0.147740 20.0868 < 2.2e-16 ***
+z_dep_asym    0.330463   0.074045  4.4630 8.082e-06 ***
+z_cap_asym   -0.123096   0.088422 -1.3921 0.1638799    
+z_emb        -0.769327   0.217072 -3.5441 0.0003939 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+             Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.96763    0.34757  8.5383 < 2.2e-16 ***
+z_dep_asym    0.33046    0.10157  3.2535   0.00114 ** 
+z_cap_asym   -0.12310    0.15945 -0.7720   0.44012    
+z_emb        -0.76933    0.18348 -4.1930 2.753e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== full model: dep_asymmetry + cap_asymmetry + mutual dependence (MEAN, near-collinear -- not informative, shown for completeness) ===
+--- 1-way ---
+
+z test of coefficients:
+
+               Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.9549452  0.1483691 19.9162 < 2.2e-16 ***
+z_dep_asym    0.0090855  0.2113904  0.0430 0.9657175    
+z_cap_asym   -0.0901584  0.0883232 -1.0208 0.3073594    
+z_mutual      0.3298733  0.2007882  1.6429 0.1004053    
+z_emb        -0.8157483  0.2163960 -3.7697 0.0001634 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+               Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.9549452  0.3484275  8.4808 < 2.2e-16 ***
+z_dep_asym    0.0090855  0.2899112  0.0313    0.9750    
+z_cap_asym   -0.0901584  0.1422645 -0.6337    0.5263    
+z_mutual      0.3298733  0.3609545  0.9139    0.3608    
+z_emb        -0.8157483  0.1850670 -4.4079 1.044e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== full model, DEFENSIBLE spec: dep_asymmetry + cap_asymmetry + mutual dependence (MIN, weak-link) ===
+--- 1-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.954945   0.148369 19.9162 < 2.2e-16 ***
+z_dep_asym    0.270097   0.083463  3.2361 0.0012116 ** 
+z_cap_asym   -0.090158   0.088323 -1.0208 0.3073594    
+z_mutual_min  0.117492   0.071515  1.6429 0.1004053    
+z_emb        -0.815748   0.216396 -3.7697 0.0001634 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+--- 2-way ---
+
+z test of coefficients:
+
+              Estimate Std. Error z value  Pr(>|z|)    
+z_unbal_load  2.954945   0.348428  8.4808 < 2.2e-16 ***
+z_dep_asym    0.270097   0.083534  3.2334  0.001223 ** 
+z_cap_asym   -0.090158   0.142264 -0.6337  0.526252    
+z_mutual_min  0.117492   0.128562  0.9139  0.360774    
+z_emb        -0.815748   0.185067 -4.4079 1.044e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

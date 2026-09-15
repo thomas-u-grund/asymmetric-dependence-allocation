@@ -1,0 +1,8 @@
+M4 dependence-asymmetry coefficient: 0.2975  clustered SE: 0.0904 
+dep_asymmetry range used (10th-90th pctile): 0 0.1 
+
+At 10th/50th/90th percentile of asymmetry (comparison held at median):
+  10th pctile: P = 0.5 
+  90th pctile: P = 0.565 
+
+22_figure2_main_effect.R complete. Saved results/fig2_main_effect.pdf, .png, and figure2_data.csv
