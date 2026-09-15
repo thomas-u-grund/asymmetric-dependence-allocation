@@ -75,13 +75,8 @@ original source. Codebooks are included alongside each dataset in `raw/`.
 The full Correlates of War data-set index is at
 https://correlatesofwar.org/data-sets/.
 
-## Related project
+## Central question
 
-This project is a follow-up to *Two Paths Out of Imbalance* (prepared for
-JCR), which models how signed interstate triads resolve via dissolution
-or realignment and treats trade volume as a stabilizing control. Its own
-replication pack is at
-https://github.com/thomas-u-grund/two-paths-out-of-imbalance. This
-project asks a different question — not whether trade *interdependence*
-stabilizes a triad, but whether *asymmetric* trade dependence determines
-which relationship absorbs an adjustment that has to happen somewhere.
+This project asks not whether trade *interdependence* stabilizes a
+triad, but whether *asymmetric* trade dependence determines which
+relationship absorbs an adjustment that has to happen somewhere.
